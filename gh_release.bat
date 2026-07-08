@@ -2,7 +2,7 @@
 chcp 65001 >nul
 setlocal enabledelayedexpansion
 
-set VerName=4.8.4
+set VerName=4.8.5
 
 :: ================= 配置区域 =================
 set "ZIP_PATH=\\192.168.123.128\测试版本基线\RTCSDK\androidV4\RTCSDK_Android(V!VerName!).zip"
