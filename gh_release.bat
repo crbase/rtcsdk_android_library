@@ -12,7 +12,7 @@ set "TAG_NAME=!VerName!"
 set "RELEASE_TITLE=!VerName!"
 set "RELEASE_NOTES=!VerName!"
 set "EXTRACT_DIR=!REPO_PATH!\rtcsdk_extract"
-set "TARGET_PATH=!REPO_PATH!\rtcsdk-plugin\libs"
+set "TARGET_PATH=!REPO_PATH!\libs"
 :: ==========================================
 
 echo VerName: !VerName!
@@ -68,7 +68,7 @@ if errorlevel 1 (
     pause
     exit /b 1
 )
-powershell -Command "(Get-Content rtcsdk-plugin/build.gradle) -replace 'versionName \".*\"', 'versionName \"%VerName%\"' | Set-Content rtcsdk-plugin/build.gradle"
+powershell -Command "(Get-Content build.gradle) -replace 'versionName \".*\"', 'versionName \"%VerName%\"' | Set-Content build.gradle"
 
 echo 开始执行Git命令...
 
