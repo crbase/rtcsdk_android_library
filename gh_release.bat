@@ -103,10 +103,10 @@ if errorlevel 1 (
 
 :: 2. 创建标签并推送到远程仓库
 echo 正在创建标签: !TAG_NAME!
-git tag -a "!TAG_NAME!" -m "!COMMIT_MSG!"
+::  git tag -a "!TAG_NAME!" -m "!COMMIT_MSG!"
 if errorlevel 1 (
     echo 标签 !TAG_NAME! 已存在，尝试直接推送...
-    git push origin "!TAG_NAME!"
+    :: git push origin main
     if errorlevel 1 (
         echo 错误：推送标签失败
         pause
@@ -114,7 +114,7 @@ if errorlevel 1 (
     )
     echo 标签推送成功
 ) else (
-    git push origin "!TAG_NAME!"
+    ::  git push origin main
     if errorlevel 1 (
         echo 错误：推送标签失败
         pause
