@@ -2,7 +2,7 @@
 chcp 65001 >nul
 setlocal enabledelayedexpansion
 
-set VerName=4.8.5
+set VerName=4.8.3
 
 :: ================= 配置区域 =================
 set "ZIP_PATH=\\192.168.123.128\测试版本基线\RTCSDK\androidV4\RTCSDK_Android(V!VerName!).zip"
@@ -103,10 +103,10 @@ if errorlevel 1 (
 
 :: 2. 创建标签并推送到远程仓库
 echo 正在创建标签: !TAG_NAME!
-::  git tag -a "!TAG_NAME!" -m "!COMMIT_MSG!"
+:: git tag -a "!TAG_NAME!" -m "!COMMIT_MSG!"
 if errorlevel 1 (
     echo 标签 !TAG_NAME! 已存在，尝试直接推送...
-    :: git push origin main
+    :: git push origin !TAG_NAME!
     if errorlevel 1 (
         echo 错误：推送标签失败
         pause
@@ -114,7 +114,7 @@ if errorlevel 1 (
     )
     echo 标签推送成功
 ) else (
-    ::  git push origin main
+    :: git push origin !TAG_NAME!
     if errorlevel 1 (
         echo 错误：推送标签失败
         pause
