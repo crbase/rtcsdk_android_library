@@ -29,7 +29,7 @@ android {
         minSdk 16
         targetSdk 33
         versionCode 1
-        versionName "4.8.3"
+        versionName "4.8.4"
 
         consumerProguardFiles "consumer-rules.pro"
 
@@ -40,7 +40,6 @@ android {
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
-            // 排除 BuildConfig.java
             java {
                 exclude '**/BuildConfig.java'
             }
@@ -62,12 +61,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    // AGP 8+ 发布 AAR �?Maven 需要声�?release 变体
     publishing {
         singleVariant("release")
     }
 
-    // 关键：打包时排除 BuildConfig
     packagingOptions {
         exclude '**/BuildConfig.class'
         exclude '**/BuildConfig.java'
@@ -86,7 +83,6 @@ publishing {
             groupId = 'com.rtc.sdk'
             artifactId = 'rtcsdk'
             version = project.android.defaultConfig.versionName
-            // components.release 需�?Android 插件配置完成后才能访�?
             afterEvaluate {
                 from components.release
             }
