@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rtcsdk_android_library.iml" filepath="$PROJECT_DIR$/.idea/modules/rtcsdk_android_library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rtcsdk_android_library.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/rtcsdk_android_library.androidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rtcsdk_android_library.main.iml" filepath="$PROJECT_DIR$/.idea/modules/rtcsdk_android_library.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rtcsdk_android_library.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/rtcsdk_android_library.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rtcsdk.iml" filepath="$PROJECT_DIR$/.idea/modules/rtcsdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rtcsdk.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/rtcsdk.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rtcsdk.main.iml" filepath="$PROJECT_DIR$/.idea/modules/rtcsdk.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/rtcsdk.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/rtcsdk.unitTest.iml" />
     </modules>
   </component>
 </project>
