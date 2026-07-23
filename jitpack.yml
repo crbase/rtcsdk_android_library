@@ -1,3 +1,2 @@
 install:
-  - FILE="-Dfile=RTCSDK_Android.aar"
-  - mvn install:install-file $FILE -DgroupId=com.rtc -DartifactId=sdk -Dversion=4.8.7 -Dpackaging=aar -DpomFile=pom.xml
+  - mvn install:install-file -Dfile=RTCSDK_Android.aar -DgroupId=com.rtc -DartifactId=sdk -Dversion=4.8.7 -Dpackaging=aar -DgeneratePom=true
